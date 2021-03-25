@@ -20,13 +20,13 @@ namespace reCAPTCHA.AspNetCore.Example
         {
             services.AddControllersWithViews();
 
-            //services.AddRecaptcha(Configuration.GetSection("RecaptchaSettings"));
+            services.AddRecaptcha(Configuration.GetSection("RecaptchaSettings"));
 
-            services.AddRecaptcha(options =>
-            {
-                options.SecretKey = "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe";
-                options.SiteKey = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
-            });
+            //services.AddRecaptcha(options =>
+            //{
+            //    options.SecretKey = "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe";
+            //    options.SiteKey = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

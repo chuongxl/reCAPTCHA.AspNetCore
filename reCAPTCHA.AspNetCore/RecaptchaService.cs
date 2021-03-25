@@ -24,10 +24,8 @@ namespace reCAPTCHA.AspNetCore
                 throw new ValidationException("Google recaptcha response not found in form. Did you forget to include it?");
 
             var response = request.Form["g-recaptcha-response"];
-            var result = await Client.PostAsync($"https://{RecaptchaSettings.Site}/recaptcha/api/siteverify", new StringContent(
-                $"secret={RecaptchaSettings.SecretKey}&response={response}", Encoding.UTF8, "application/x-www-form-urlencoded"));
 
-            var captchaResponse = JsonSerializer.Deserialize<RecaptchaResponse>(await result.Content.ReadAsStringAsync());
+            var captchaResponse = await SendVerifyRequestAsync(response);
 
             if (captchaResponse.success && antiForgery)
                 if (captchaResponse.hostname?.ToLower() != request.Host.Host?.ToLower() && captchaResponse.hostname != "testkey.google.com")
@@ -36,15 +34,22 @@ namespace reCAPTCHA.AspNetCore
             return captchaResponse;
         }
 
-        public async Task<RecaptchaResponse> Validate(string responseCode)
+        private async Task<RecaptchaResponse> SendVerifyRequestAsync(Microsoft.Extensions.Primitives.StringValues response)
+        {
+            var result = await Client.PostAsync($"https://{RecaptchaSettings.Site}/recaptcha/api/siteverify", new StringContent(
+                $"secret={RecaptchaSettings.SecretKey}&response={response}", Encoding.UTF8, "application/x-www-form-urlencoded"));
+
+            var captchaResponse = JsonSerializer.Deserialize<RecaptchaResponse>(await result.Content.ReadAsStringAsync());
+
+            return captchaResponse;
+        }
+
+        public Task<RecaptchaResponse> Validate(string responseCode)
         {
             if (string.IsNullOrEmpty(responseCode))
                 throw new ValidationException("Google recaptcha response is empty?");
 
-            var result = await Client.GetStringAsync($"https://{RecaptchaSettings.Site}/recaptcha/api/siteverify?secret={RecaptchaSettings.SecretKey}&response={responseCode}");
-            var captchaResponse = JsonSerializer.Deserialize<RecaptchaResponse>(result);
-
-            return captchaResponse;
+            return SendVerifyRequestAsync(responseCode);
         }
     }
 }

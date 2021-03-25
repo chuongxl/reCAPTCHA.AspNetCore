@@ -288,3 +288,4 @@ __pycache__/
 *.xsd.cs
 *.nuspec
 /lib/netcoreapp2.0
+/reCAPTCHA.AspNetCore.Example/appsettings.Development.json
