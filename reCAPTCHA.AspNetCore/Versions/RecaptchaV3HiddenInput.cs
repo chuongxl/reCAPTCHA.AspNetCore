@@ -8,6 +8,6 @@ namespace reCAPTCHA.AspNetCore.Versions
     {
         public string Id { get; set; } = "g-recaptcha-response";
         public string Action { get; set; } = "homepage";
-        public bool IsAsync { get; set; } = true;
+        public bool IsAsync { get; set; } = false;
     }
 }

@@ -1,17 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>3.0.10</Version>
-    <Authors>Timothy D Meadows II</Authors>
+    <Version>1.0.0</Version>
+    <Authors>Chuong Nguyen</Authors>
     <PackageLicenseUrl></PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/TimothyMeadows/reCAPTCHA.AspNetCore/</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/TimothyMeadows/reCAPTCHA.AspNetCore/</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/chuongxl/reCAPTCHA.AspNetCore</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/chuongxl/reCAPTCHA.AspNetCore</RepositoryUrl>
     <RepositoryType>Github</RepositoryType>
     <Description>Google reCAPTCHA ASP.NET Core 3</Description>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <PackageId>reCAPTCHA.AspNetCore.FixedV3</PackageId>
+    <Company>logixtek.com</Company>
+    <PackageReleaseNotes>Fix the google reCaptCha V3.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

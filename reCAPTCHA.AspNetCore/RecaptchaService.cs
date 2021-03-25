@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Options;
 using System.ComponentModel.DataAnnotations;
 using System.Net.Http;
+using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
@@ -23,8 +24,10 @@ namespace reCAPTCHA.AspNetCore
                 throw new ValidationException("Google recaptcha response not found in form. Did you forget to include it?");
 
             var response = request.Form["g-recaptcha-response"];
-            var result = await Client.GetStringAsync($"https://{RecaptchaSettings.Site}/recaptcha/api/siteverify?secret={RecaptchaSettings.SecretKey}&response={response}");
-            var captchaResponse = JsonSerializer.Deserialize<RecaptchaResponse>(result);
+            var result = await Client.PostAsync($"https://{RecaptchaSettings.Site}/recaptcha/api/siteverify", new StringContent(
+                $"secret={RecaptchaSettings.SecretKey}&response={response}", Encoding.UTF8, "application/x-www-form-urlencoded"));
+
+            var captchaResponse = JsonSerializer.Deserialize<RecaptchaResponse>(await result.Content.ReadAsStringAsync());
 
             if (captchaResponse.success && antiForgery)
                 if (captchaResponse.hostname?.ToLower() != request.Host.Host?.ToLower() && captchaResponse.hostname != "testkey.google.com")

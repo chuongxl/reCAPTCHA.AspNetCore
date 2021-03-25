@@ -18,7 +18,7 @@ namespace reCAPTCHA.AspNetCore.Templates
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+    #line 1 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class RecaptchaV2Invisible : RecaptchaV2InvisibleBase
     {
@@ -30,77 +30,77 @@ namespace reCAPTCHA.AspNetCore.Templates
         {
             this.Write("\r\n<script>\r\n\tfunction _");
             
-            #line 8 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 8 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.Uid.ToString().Replace("-", "_")));
             
             #line default
             #line hidden
             this.Write("() {\r\n\t\tif (typeof grecaptcha !== \'undefined\') {\r\n\t\t\tgrecaptcha.render(\'");
             
-            #line 10 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 10 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.Id));
             
             #line default
             #line hidden
             this.Write("\', {\r\n\t\t\t\t\'sitekey\' : \'");
             
-            #line 11 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 11 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.Settings.SiteKey));
             
             #line default
             #line hidden
             this.Write("\',\r\n\t\t\t\t\'callback\' : _");
             
-            #line 12 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 12 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.Uid.ToString().Replace("-", "_")));
             
             #line default
             #line hidden
             this.Write("_,\r\n\t\t\t\t");
             
-            #line 13 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 13 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
  if (!string.IsNullOrEmpty(Model.ErrorCallback)) { 
             
             #line default
             #line hidden
             this.Write("\t\t\t\t\'error-callback\' : \'");
             
-            #line 14 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 14 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.ErrorCallback));
             
             #line default
             #line hidden
             this.Write("\',\r\n\t\t\t\t");
             
-            #line 15 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 15 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
  } 
             
             #line default
             #line hidden
             this.Write("\t\t\t\t");
             
-            #line 16 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 16 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
  if (!string.IsNullOrEmpty(Model.ExpiredCallback)) { 
             
             #line default
             #line hidden
             this.Write("\t\t\t\t\'expired-callback\' : \'");
             
-            #line 17 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 17 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.ExpiredCallback));
             
             #line default
             #line hidden
             this.Write("\',\r\n\t\t\t\t");
             
-            #line 18 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 18 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
  } 
             
             #line default
             #line hidden
             this.Write("\t\t\t});\r\n\r\n\t\t\tdocument.getElementById(\'");
             
-            #line 21 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 21 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.Id));
             
             #line default
@@ -108,98 +108,98 @@ namespace reCAPTCHA.AspNetCore.Templates
             this.Write("\').onclick = function(e) {\r\n\t\t\t\te.preventDefault();\r\n\t\t\t\tgrecaptcha.execute();\r\n\t" +
                     "\t\t};\r\n\t\t}\r\n\t}\r\n\r\n\tfunction _");
             
-            #line 28 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 28 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.Uid.ToString().Replace("-", "_")));
             
             #line default
             #line hidden
             this.Write("_(token) {\r\n\t\tdocument.getElementById(\'");
             
-            #line 29 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 29 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.Id));
             
             #line default
             #line hidden
             this.Write("\').form.submit();\r\n\t\t");
             
-            #line 30 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 30 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
  if (!string.IsNullOrEmpty(Model.SuccessCallback)) { 
             
             #line default
             #line hidden
             this.Write("\t\t");
             
-            #line 31 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 31 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.SuccessCallback));
             
             #line default
             #line hidden
             this.Write("(token);\r\n\t\t");
             
-            #line 32 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 32 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
  } 
             
             #line default
             #line hidden
             this.Write("\t}\r\n</script>\r\n<script ");
             
-            #line 35 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 35 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
  if (!string.IsNullOrEmpty(Model.Settings.ContentSecurityPolicy)) {
             
             #line default
             #line hidden
             this.Write("script-src=\"");
             
-            #line 35 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 35 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.Settings.ContentSecurityPolicy));
             
             #line default
             #line hidden
             this.Write("\"");
             
-            #line 35 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 35 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
 }
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 35 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 35 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
  if (!string.IsNullOrEmpty(Model.Settings.ContentSecurityPolicy)) {
             
             #line default
             #line hidden
             this.Write("frame-src=\"");
             
-            #line 35 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 35 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.Settings.ContentSecurityPolicy));
             
             #line default
             #line hidden
             this.Write("\"");
             
-            #line 35 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 35 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
 }
             
             #line default
             #line hidden
             this.Write(" src=\"https://");
             
-            #line 35 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 35 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.Settings.Site));
             
             #line default
             #line hidden
             this.Write("/recaptcha/api.js?onload=_");
             
-            #line 35 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 35 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.Uid.ToString().Replace("-", "_")));
             
             #line default
             #line hidden
             this.Write("&render=explicit&hl=");
             
-            #line 35 "E:\Repository\TimothyMeadows\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
+            #line 35 "D:\GitHub\Folk\reCAPTCHA.AspNetCore\reCAPTCHA.AspNetCore\Templates\RecaptchaV2Invisible.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.Language));
             
             #line default

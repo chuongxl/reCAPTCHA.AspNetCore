@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Text.Json.Serialization;
 
 namespace reCAPTCHA.AspNetCore
 {
@@ -11,5 +10,8 @@ namespace reCAPTCHA.AspNetCore
         public string action { get; set; }
         public DateTime challenge_ts { get; set; }
         public string hostname { get; set; }
+
+        [JsonPropertyName("error-codes")]
+        public string[] ErrorCodes { get; set; }
     }
 }
