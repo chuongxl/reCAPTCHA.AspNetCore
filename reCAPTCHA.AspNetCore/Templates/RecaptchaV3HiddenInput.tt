@@ -5,8 +5,9 @@
 <#@ import namespace="System.Collections.Generic" #>
 
 <input id="<#= Model.Id #>" name="g-recaptcha-response" type="hidden" value="" />
-<script <# if (!string.IsNullOrEmpty(Model.Settings.ContentSecurityPolicy)) {#>script-src="<#= Model.Settings.ContentSecurityPolicy #>"<#}#> <# if (!string.IsNullOrEmpty(Model.Settings.ContentSecurityPolicy)) {#>frame-src="<#= Model.Settings.ContentSecurityPolicy #>"<#}#> src="https://<#= Model.Settings.Site #>/recaptcha/api.js?render=<#= Model.Settings.SiteKey #>&hl=<#= Model.Language #>" <# if (Model.IsAsync) {#>async defer<#}#> ></script>
+<script <# if (!string.IsNullOrEmpty(Model.Settings.ContentSecurityPolicy)) {#>script-src="<#= Model.Settings.ContentSecurityPolicy #>"<#}#> <# if (!string.IsNullOrEmpty(Model.Settings.ContentSecurityPolicy)) {#>frame-src="<#= Model.Settings.ContentSecurityPolicy #>"<#}#> src="https://<#= Model.Settings.Site #>/recaptcha/api.js?render=<#= Model.Settings.SiteKey #>&hl=<#= Model.Language #>&onload=ReCaptchaCallbackV3" <# if (Model.IsAsync) {#>async defer<#}#> ></script>
 <script>
+var ReCaptchaCallbackV3 = function() {
 	if (typeof grecaptcha !== 'undefined') {
 		grecaptcha.ready(function () {
 			grecaptcha.execute('<#= Model.Settings.SiteKey #>', { 'action': '<#= Model.Action #>' }).then(function (token) {
@@ -14,4 +15,8 @@
 			});
 		});
 	}
+	}
+
+	ReCaptchaCallbackV3();
+
 </script>
