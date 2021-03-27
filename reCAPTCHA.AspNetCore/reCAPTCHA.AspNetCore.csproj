@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
     <Authors>Chuong Nguyen</Authors>
     <PackageLicenseUrl></PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/chuongxl/reCAPTCHA.AspNetCore</PackageProjectUrl>
@@ -11,10 +11,11 @@
     <RepositoryType>Github</RepositoryType>
     <Description>rGoogle reCAPTCHA ASP.NET Core 34
 Support to reload the token
-Support to bind the error to property</Description>
+Support to bind the error to property
+Support to bind error property on Attribute</Description>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <AssemblyVersion>1.0.3.0</AssemblyVersion>
+    <AssemblyVersion>1.0.4.0</AssemblyVersion>
     <PackageId>reCAPTCHA.AspNetCore.FixedV3</PackageId>
     <Company>logixtek.com</Company>
     <PackageReleaseNotes>Fix the google reCaptCha V3.</PackageReleaseNotes>
